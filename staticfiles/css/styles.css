@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/associacao_projeto_oficina/siteweb/static/imagens/imagem1.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    background-color: blue;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgb(121, 11, 97);
+    color: aliceblue;
+    text-decoration: aliceblue;
+}
+
+#rodape-geral {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    text-decoration: none;
+    background-color: black;
+    padding: 20px;
+    text-align:justify;
+    justify-content: space-around;
+
+}
+.ajude-nos {
+background-color: rgb(18, 49, 68);
+}
