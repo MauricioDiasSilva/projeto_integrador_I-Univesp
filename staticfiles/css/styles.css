@@ -1,37 +1,114 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-image: url("/associacao_projeto_oficina/siteweb/static/imagens/imagem1.jpeg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.7;
-    background-color: blue;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display:flexbox;
+    flex-wrap: wrap;
+    text-align:center;
+    justify-content: space-around;
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 
-.navbar {
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+aside {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
-    background-color: rgb(121, 11, 97);
-    color: aliceblue;
-    text-decoration: aliceblue;
-}
-
-#rodape-geral {
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    text-decoration: none;
-    background-color: black;
     padding: 20px;
-    text-align:justify;
-    justify-content: space-around;
-
 }
-.ajude-nos {
-background-color: rgb(18, 49, 68);
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-bottom {
+    padding: 10px;
+}
+.footer-ul{
+    text-decoration: none;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.foto {
+    flex: 1 0 21%; /* Crescer, não encolher, base de 21% */
+    margin: 1%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+}
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }

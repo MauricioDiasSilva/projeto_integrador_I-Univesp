@@ -9,6 +9,8 @@ class CriancaEspecial(models.Model):
     responsavel = models.CharField(max_length=100, default="Insira um Nome")
     endereço = models.CharField(max_length=200, default="Insira um endereço")
     telefone = models.CharField(max_length=80, default="Insira um telefone")
+    email = models.EmailField(
+        max_length=200, default="seunome@instituição.com.br")
 
     def __str__(self):
         return self.nome
