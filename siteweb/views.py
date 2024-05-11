@@ -1,8 +1,8 @@
 # ARQUIVO VIEWS
-from django.shortcuts import render
-# myapp/views.py
-
+from django.shortcuts import render, redirect
 from .forms import CriancaEspecialForm
+from .forms import CadastroForm
+
 
 
 def index(request):
@@ -20,9 +20,15 @@ def missao(request):
 def valores(request):
     return render(request, 'siteweb/valores.html')
 
-
 def cadastro(request):
-    return render(request, 'siteweb/cadastro.html')
+    if request.method == 'POST':
+        form = CadastroForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = CadastroForm()
+    return render(request, 'siteweb/cadastro.html', {'form': form})
 
 
 def base(request):
@@ -39,4 +45,9 @@ def minha_view(request):
     else:
         form = CriancaEspecialForm()
 
-    return render(request, 'cadastro.html', {'form': form})
+    return render(request, 'contato.html', {'form': form})
+
+
+
+
+     

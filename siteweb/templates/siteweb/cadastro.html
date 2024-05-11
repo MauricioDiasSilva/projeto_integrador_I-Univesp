@@ -2,8 +2,21 @@
 
 <h1>Cadastro</h1>
 <form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Enviar</button>
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="username">Nome de usuário:</label>
+        <input id="username" type="text" name="username" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Senha:</label>
+        <input id="password" type="password" name="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
+
 
 {% endblock content %}

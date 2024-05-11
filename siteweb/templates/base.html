@@ -33,14 +33,14 @@
     </nav>
 
   <div class="carrossel">
-    <div class="slide" style="background-image: url('{% static "imagens/logofacebook.png" %}');"></div>
-    <div class="slide" style="background-image: url('{% static "imagens/logoinstagram.png"%}');"></div>
-    <div class="slide" style="background-image: url('{% static "imagens/logolinkedin.png" %}');"></div>
-    <div class="slide" style="background-image: url('{% static "imagens/logotwitter.png" %}');"></div>
+    <div class="slide" style="background-image: url('{% static "./imagens/imagemcarrossel1.jpg" %}');"></div>
+    <div class="slide" style="background-image: url('{% static "./imagens/imagemcarrossel2.jpg" %}');"></div>
+    <div class="slide" style="background-image: url('{% static "./imagens/imagemcarrossel3.jpg" %}');"></div>
+    <div class="slide" style="background-image: url('{% static "./imagens/imagemcarrossel1.jpg" %}');"></div>
   </div>
 
 
-  <h1>Cabeçalho da Página</h1>
+  <h1>Associação Projeto Oficina</h1>
 
     {% comment %} scripts do bootstrap caso precise
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -48,44 +48,44 @@
   </header>
 
   <aside>
+    <div  class ="socio_transformador">
     <h3>Seja um Sócio Transformador</h3>
     <p>A partir de R$10,00 por mês, você se torna um Sócio Transformador e
       pode transformar a vida de muitas pessoas.</p>
-    <button>Para fazer uma doação rápida e fácil, basta usar o pix!</button>
+      <button id=> <a href="#"> Para fazer uma doação rápida e fácil, basta usar o pix!</button>
+    <div>
   </aside>
 
   <body>
 
 <main>
-  <div class-"container">
+  <div class="container">
     <div class="nossahistoria">
       <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
       <h3>Nossa História</h3>
       <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
     </div>
 
-    <div class="destaque">
-      <div>
-        <h3>Nossa História</h3>
-        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-        <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
-      </div>
-
-      <div>
-        <h3>Nossa História</h3>
-        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-        <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
-      </div>
-
-      <div>
-        <h3>Nossa História</h3>
-        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-        <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
-      </div>
+    <div class="nossahistoria">
+      <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
+      <h3>Nossa História</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
     </div>
 
+    <div class="nossahistoria">
+      <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
+      <h3>Nossa História</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    </div>
+
+    <div class="nossahistoria">
+      <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
+      <h3>Nossa História</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    </div>
   </div>
 </main>
+
 
 {% block content %}
 
@@ -101,24 +101,25 @@
     <p>Este é o conteúdo da Seção 2.</p>
 </section>
 
-
-<aside>
-  <h3>Informações Adicionais</h3>
-  <p>Ajude-nos a realizar ainda mais</p>
-  <p>Para fazer uma doação rápida e fácil, basta usar o pix!</p>
-</aside>
+  <aside>
+    <div  class ="socio_transformador">
+    <h3>Informações Adicionais</h3>
+    <p>Ajude-nos a realizar ainda mais</p>
+      <button id=> <a href="#"> Para fazer uma doação rápida e fácil, basta usar o pix!</button>
+    <div>
+  </aside>
 
   </body>
 
 <footer>
   <div class="footer-content">
 
-    <div class="footer-section about">
+    <div class="footer-section-about">
       <h1> Associação Projeto Oficina</h1>
       <h2> Transformando Vidas </h2>
     </div>
 
-    <div class="footer-section links">
+    <div class="footer-section-links">
       <h2>Links Úteis</h2>
       <ul>
         <h3>Suporte</h3>

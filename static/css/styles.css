@@ -1,76 +1,120 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-}
-
-nav {
-    display:flexbox;
-    flex-wrap: wrap;
-    text-align:center;
-    justify-content: space-around;
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px;
-    margin-top: 0;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
 }
 
+.carrossel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
 
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 10px;
+.carrossel .slide {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: opacity 1s;
 }
 
 aside {
-    background-color: #e9ecef;
-    padding: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-footer {
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
+
+.socio_transformador {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a745;
+    color: white;
     padding: 20px;
+    margin: 0px 0;
+    text-align: center;
+    width: 100%;
 }
+
+#btn_doacao {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#btn_doacao a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nossahistoria {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    flex: 1 0 200px;
+    /* Adicione esta linha */
+    text-align: center;
+}
+
+
+.nossahistoria img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+section {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
 
 .footer-content {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    padding: 10px;
-}
-
-.footer-bottom {
-    padding: 10px;
-}
-.footer-ul{
-    text-decoration: none;
 }
 
 #gallery {
@@ -80,7 +124,8 @@ footer {
 }
 
 .foto {
-    flex: 1 0 21%; /* Crescer, não encolher, base de 21% */
+    flex: 1 0 21%;
+    /* Crescer, não encolher, base de 21% */
     margin: 1%;
     text-align: center;
     box-sizing: border-box;
@@ -90,6 +135,7 @@ footer {
     width: 100%;
     height: auto;
 }
+
 .carrossel {
     position: relative;
     width: 100%;
@@ -107,8 +153,72 @@ footer {
     opacity: 0;
 }
 
-.container{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(142, 184, 184);
+}
+
+
+#btn_doacao {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btn_doacao a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #007bff;
+}
+
+
+.footer-section-about,
+.footer-section-links,
+.footer-section-contact,
+.footer-Redes-Sociais {
+    width: 200px;
+    /* Largura de cada seção */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo de cada seção */
+}
+
+.footer-section-links ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    padding: 0;
+    /* Remove o preenchimento padrão da lista */
+}
+
+.footer-section-links ul li a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: black;
+    /* Cor dos links */
+}
+
+.footer-Redes-Sociais img {
+    width: 30px;
+    /* Largura das imagens das redes sociais */
+    height: 30px;
+    /* Altura das imagens das redes sociais */
+}
+
+.missao {
+    /* Adicione suas regras CSS aqui */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #360f52c2;
+    padding: 20px;
 }

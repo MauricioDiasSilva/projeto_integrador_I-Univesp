@@ -1,9 +1,26 @@
 {% extends "base.html" %}
+{%load static%}
 
-<h1>ola mundo</h1>
 
 {% block content %}
 
-<p>oi mundo</p>
+
+<main>
+
+  <div class="missao">
+    <div class="img-mission">
+         <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
+    <div>     
+      <h3>Nossa História</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    </div class="img-mission">
+         <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
+    <div>     
+      <h3>Nossa História</h3>
+      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    </div>
+  
+  </div>
+</main>
 
 {% endblock content %}
