@@ -1,1 +1,2 @@
-web: gunicorn nome_do_seu_arquivo:app
+web: gunicorn associacao_projeto_oficina.wsgi
+
