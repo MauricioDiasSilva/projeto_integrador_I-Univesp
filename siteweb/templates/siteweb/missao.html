@@ -1,26 +1,25 @@
 {% extends "base.html" %}
 {%load static%}
 
+<title>{% block title %}Missão{% endblock %}</title>
 
 {% block content %}
 
 
 <main>
 
-  <div class="missao">
+{% for missao in missoes %}
+  <div class="row {% cycle 'left' 'right' %}">
     <div class="img-mission">
-         <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
-    <div>     
-      <h3>Nossa História</h3>
-      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-    </div class="img-mission">
-         <img src="{% static "imagens/logofacebook.png" %}" alt="facebook">
-    <div>     
-      <h3>Nossa História</h3>
-      <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+      <img src={{ missao.imagem.url }} alt="imagem da missão" style="width: 100%; max-width: 400px;">
+    </div>     
+    <div>
+      <h3 id="titulo">{{ missao.titulo }}</h3>
+      <p id="texto">{{ missao.texto }}</p>
     </div>
-  
   </div>
+{% endfor %}
+
 </main>
 
 {% endblock content %}

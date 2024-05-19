@@ -1,7 +1,6 @@
 
 from django.db import models
 
-
 class CriancaEspecial(models.Model):
     nome = models.CharField(max_length=100)
     idade = models.PositiveIntegerField()
@@ -14,3 +13,24 @@ class CriancaEspecial(models.Model):
 
     def __str__(self):
         return self.nome
+    
+class Missao(models.Model):
+    titulo = models.CharField(max_length=200)
+    texto = models.TextField()
+    imagem = models.ImageField(upload_to='static/imagens')
+    
+
+class ValorImage(models.Model):
+    imagem = models.ImageField(upload_to='static/imagens')
+    # outros campos, se necessário
+
+class Contato(models.Model):
+    nome = models.CharField(max_length=200)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=20)
+    Observacoes = models.TextField(default='Sem observações')
+
+
+
+
+

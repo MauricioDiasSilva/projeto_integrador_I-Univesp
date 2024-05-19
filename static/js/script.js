@@ -4,6 +4,6 @@ var slideInterval = setInterval(nextSlide, 2000); // Muda o slide a cada 2 segun
 
 function nextSlide() {
     slides[currentSlide].style.opacity = 0;
-    currentSlide = (currentSlide+1)%slides.length;
+    currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].style.opacity = 1;
 }

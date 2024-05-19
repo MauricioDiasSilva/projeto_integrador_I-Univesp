@@ -1,9 +1,35 @@
 {% extends "base.html" %}
 
-<h1>ola mundo</h1>
+<title>{% block title %}Valores{% endblock %}</title>
+
 
 {% block content %}
 
-<p>oi mundo</p>
+
+<main>
+
+ <div class="imagem-valores">
+  <h1 id="titulo-valores" style="display: flex; flex-direction: column; align-items: center;">Nossos Valores</h1>
+  <h3 id="p-valores" style="display: flex; flex-direction: column; align-items: center;font-size:30px;">Nós da Associação Projeto Oficina acreditamos nos seguintes valores fundamentais:</h3>
+  <ul id="valores">
+    <li><span class="Empatia">Empatia:</span> Nós nos esforçamos para entender e compartilhar os sentimentos de nossas crianças e suas famílias.</li>
+    <li><span class="Empatia">Respeito:</span> Valorizamos a individualidade e a dignidade de cada criança que atendemos.</li>
+    <li><span class="Empatia">Integridade:</span> Estamos comprometidos em agir com honestidade, transparência e consistência.</li>
+    <li><span class="Empatia">Inovação:</span> Buscamos constantemente novas e melhores maneiras de atender nossas crianças e suas famílias.</li>
+    <li><span class="Empatia">Colaboração:</span> Trabalhamos juntos para alcançar nossos objetivos e fazer a diferença.</li>
+  </ul>   
+</div>
+
+
+<div class="imagens_valores" style="display: flex; flex-wrap: wrap;">
+{% for imagem in imagens %}
+  <div class="img-valor" style="flex: 1 0 21%; margin: 5px;">
+    <img src={{ imagem.imagem.url }} alt="imagem do valor" style="width: 100%; max-width: 400px;">
+  </div>
+{% endfor %}
+</div>
+
+</main>
+
 
 {% endblock content %}

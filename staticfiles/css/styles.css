@@ -5,33 +5,40 @@ body {
     background-color: #f5f5f5;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+.Empatia {
+    font-weight: bold;
+    color: rgb(15, 12, 221);
+    font-size: 32px;
+    /* Substitua 'red' pela cor que você deseja */
 }
 
-nav ul {
+.values p {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-size: 30px;
+    color: #fffb05;
+}
+
+#valores ul li {
+    font: size 20px;
+    padding: 10px;
+}
+
+#valores li {
+    font-size: 25px;
+    padding: 10px;
     list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.carrossel {
+.carrossel1 {
     width: 100%;
     height: 300px;
     overflow: hidden;
     position: relative;
 }
 
-.carrossel .slide {
+.carrossel1 .slide1 {
     width: 100%;
     height: 300px;
     background-size: cover;
@@ -54,12 +61,11 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #28a745;
+    background-color: #10032e;
     color: white;
     padding: 20px;
-    margin: 0px 0;
     text-align: center;
-    width: 100%;
+    width: 98%;
 }
 
 #btn_doacao {
@@ -78,6 +84,20 @@ aside {
     color: white;
     text-decoration: none;
 }
+
+.doacao-pix {
+    padding: 45px;
+    background-color: azure;
+    text-align: center;
+    justify-content: center;
+    color: #10032e;
+}
+
+#logopix {
+    height: 30%;
+    width: 30%;
+}
+
 
 .container {
     display: flex;
@@ -104,17 +124,10 @@ aside {
 }
 
 section {
-    background-color: #007bff;
+    background-color: azure;
     color: white;
     padding: 20px 0;
     text-align: center;
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
 }
 
 #gallery {
@@ -130,6 +143,51 @@ section {
     text-align: center;
     box-sizing: border-box;
 }
+
+.row.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+}
+
+.row.right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 80%;
+    font-size: 20px;
+    text-justify: inter-word;
+}
+
+.img-mission,
+.row>div {
+    display: flex;
+    flex: 60%;
+    padding: 30px;
+    justify-content: space-around;
+    gap: 40px;
+
+}
+
+#imagens_valores {
+    width: 70%;
+    gap: 200px;
+
+
+}
+
+#titulo {
+    color: rgb(5, 5, 6);
+    align-items: center;
+}
+
+#texto {
+    color: rgb(35, 6, 84);
+    text-align: justify;
+}
+
 
 .foto img {
     width: 100%;
@@ -150,17 +208,78 @@ section {
     background-size: cover;
     background-position: center;
     transition: opacity 1s;
-    opacity: 0;
+    opacity: 1;
 }
 
+.carrossel2 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.missao {
+    /* Adicione suas regras CSS aqui */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #360f52c2;
+    padding: 20px;
+}
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(142, 184, 184);
+    background-color: azure;
+
 }
 
+.form-faleconosco {
+    margin: 30px;
+    padding: 20px;
+}
+
+/* Estilo para o formulário de login */
+.login-form {
+    padding: 70px;
+    height: 400px;
+    margin: 50px;
+
+}
+
+.login-form label {
+    /* display: block; */
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.form-faleconosco {
+    margin-left: 40px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 5px;
+}
+
+.login-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
 
 #btn_doacao {
     background-color: #28a745;
@@ -177,48 +296,9 @@ main {
     text-decoration: none;
 }
 
-footer {
-    background-color: #007bff;
-}
-
-
-.footer-section-about,
-.footer-section-links,
-.footer-section-contact,
-.footer-Redes-Sociais {
-    width: 200px;
-    /* Largura de cada seção */
-    margin-bottom: 20px;
-    /* Espaçamento abaixo de cada seção */
-}
-
-.footer-section-links ul {
-    list-style: none;
-    /* Remove os marcadores de lista */
-    padding: 0;
-    /* Remove o preenchimento padrão da lista */
-}
-
-.footer-section-links ul li a {
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
-    color: black;
-    /* Cor dos links */
-}
-
-.footer-Redes-Sociais img {
-    width: 30px;
-    /* Largura das imagens das redes sociais */
-    height: 30px;
-    /* Altura das imagens das redes sociais */
-}
-
-.missao {
-    /* Adicione suas regras CSS aqui */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    background-color: #360f52c2;
-    padding: 20px;
+#foto_galeria_valores1,
+#foto_galeria_valores2 {
+    width: 35%;
+    height: 35%;
+    padding: 20px
 }

@@ -1,7 +1,61 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% load static %}
 
-<h2>Início</h2>
+<title>{% block title %}Associação Projeto Oficina{% endblock %}</title>
 
-<p>Você está na página principal</p>
+{% block content %}
+
+<header>
+
+<div class="carrossel">
+  <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel1.jpg" %}')"></div>
+  <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel2.jpg" %}')"></div>
+  <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel1.jpg" %}')"></div>
+  <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel5.jpg" %}')"></div>
+</div>
+
+
+</header>
+
+<aside>
+    <div class="socio_transformador">
+        <h3>Seja um Sócio Transformador</h3>
+        <p>A partir de R$10,00 por mês, você se torna um Sócio Transformador e pode transformar a vida de muitas pessoas.</p>
+        <a href="/siteweb/doacao.html"><button id="btn_doacao">Para fazer uma doação rápida e fácil, basta usar o pix!</button></a>
+    </div>
+</aside>
+
+<main>
+<div class="container">
+
+  <div class="nossahistoria">
+    <img src="{% static "imagens/imagem2.jpg" %}" alt="Educação">
+    <h3>Transformação através da Educação</h3>
+    <p>João, um jovem de 15 anos, estava à beira de abandonar a escola. Graças ao nosso programa de tutoria, ele não apenas se formou no ensino médio, mas também ganhou uma bolsa de estudos para a universidade!</p>
+  </div>
+
+
+  <div class="nossahistoria">
+    <img src="{% static "imagens/imagem2.jpg" %}" alt="Alimentação">
+    <h3>Alimentando Esperanças</h3>
+    <p>Nossa campanha de alimentação forneceu mais de 10.000 refeições para famílias carentes no último ano, trazendo não apenas nutrição, mas também esperança para essas comunidades.</p>
+  </div>
+
+
+  <div class="nossahistoria">
+    <img src="{% static "imagens/imagem2.jpg" %}" alt="Meio Ambiente">
+    <h3>Cuidando do Futuro</h3>
+    <p>Com nosso projeto de plantio de árvores, conseguimos reflorestar uma área de 50 hectares, contribuindo para a preservação do meio ambiente e a conscientização da nossa comunidade sobre a importância da sustentabilidade.</p>
+  </div>
+
+
+  <div class="nossahistoria">
+    <img src="{% static "imagens/imagem2.jpg" %}" alt="Emprego">
+    <h3>Capacitação para o Emprego</h3>
+    <p>Nosso programa de treinamento profissionalizante ajudou Maria, mãe solteira de três filhos, a adquirir habilidades em tecnologia da informação. Hoje, ela tem um emprego estável e pode sustentar sua família.</p>
+  </div>
+
+</div>
+</main>
 
 {% endblock content %}

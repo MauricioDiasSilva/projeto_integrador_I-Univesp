@@ -13,5 +13,5 @@ urlpatterns = [
     path('siteweb/valores.html', views.valores, name="valores"),
     path('siteweb/cadastro.html', views.cadastro, name="cadastro"),
     path('siteweb/contato.html', views.contato, name="contato"),
-
+    path('siteweb/doacao.html', views.doacao, name="doacao"),
 ]
