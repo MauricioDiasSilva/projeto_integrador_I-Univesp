@@ -1,2 +1,3 @@
 web: gunicorn associacao_projeto_oficina.wsgi
 
+django -heroku
