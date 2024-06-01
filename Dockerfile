@@ -28,3 +28,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "associacao_projeto_oficina.wsgi"]
+

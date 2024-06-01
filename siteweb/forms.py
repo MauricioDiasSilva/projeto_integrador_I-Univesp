@@ -10,8 +10,8 @@ class CriancaEspecialForm(forms.ModelForm):
         # Inclua apenas os campos essenciais
         fields = ['nome', 'telefone', 'email', 'idade',]
 
-
 class ContatoForm(forms.ModelForm):
     class Meta:
         model = Contato
-        fields = ['nome', 'email', 'telefone', 'Observacoes']
+        fields = ['nome', 'email', 'telefone', 'observacoes']  # Use 'observacoes' aqui
+

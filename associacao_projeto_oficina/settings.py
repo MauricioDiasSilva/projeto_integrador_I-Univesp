@@ -13,6 +13,7 @@ import os
 import dj_database_url
 from pathlib import Path
 from dotenv import load_dotenv
+from django.contrib.messages import constants as messages
 
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =os.environ.get('debug')
+# DEBUG =os.environ.get('debug')
+DEBUG = False
+
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://projeto-integrador-i-univesp.fly.dev']
@@ -47,7 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.whitenoisemiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,7 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'associacao_projeto_oficina.wsgi.application'
 
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS={
     messages.ERROR:'danger',
 }
@@ -86,16 +88,15 @@ MESSAGE_TAGS={
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite///' + os.path.join('sqlite3')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
 }
-
-if 'DATABASE_URL' in os.environ:
-    DATABASES['default'] = dj_database_url.config(
-        conn_max_age=500,
-        conn_health_checks=True,
-    )
 
 
 # Password validation
@@ -130,12 +131,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-# LOGOUT_REDIRECT_URL='index'
-# LOGIN_REDIRECT_URL='dashboard'
+LOGOUT_REDIRECT_URL='index'
+LOGIN_REDIRECT_URL='index'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATICFILES_STORAGE='white_noise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
