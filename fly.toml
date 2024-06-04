@@ -24,9 +24,10 @@ console_command = '/code/manage.py shell'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '2gb'  # 1 GB de memória
   cpu_kind = 'shared'
-  cpus = 1
+  cpus = 1  # 1 unidade de CPU
+
 
 [[statics]]
   guest_path = '/code/static'
