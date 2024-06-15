@@ -15,6 +15,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 from django.contrib.messages import constants as messages
 
+
+
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,10 +30,10 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG =os.environ.get('debug')
-DEBUG = False
-
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
 CSRF_TRUSTED_ORIGINS = ['https://projeto-integrador-i-univesp.fly.dev']
 
 
@@ -83,7 +85,6 @@ MESSAGE_TAGS={
     messages.ERROR:'danger',
 }
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -131,8 +132,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGOUT_REDIRECT_URL='index'
-LOGIN_REDIRECT_URL='index'
+# LOGOUT_REDIRECT_URL='index'
+# LOGIN_REDIRECT_URL='index'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
