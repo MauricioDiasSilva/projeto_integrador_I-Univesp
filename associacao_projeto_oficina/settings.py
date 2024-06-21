@@ -32,9 +32,9 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 # DEBUG =os.environ.get('debug')
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['associacao-projeto-oficina.azurewebsites.net']
 
-CSRF_TRUSTED_ORIGINS = ['https://projeto-integrador-i-univesp.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['associacao-projeto-oficina.azurewebsites.net']
 
 
 # Application definition
@@ -94,10 +94,19 @@ DATABASES = {
         'NAME': 'db',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'HOST': 'projeto-integrador-1.privatelink.mysql.database.azure.com.',
         'PORT': '3306',
+        # 'OPTIONS': {
+        #     'ssl': {
+        #         'ca': '/etc/ssl/certs/Microsoft RSA Root Certificate Authority 2017.crt',
+
+        #     },
+        #     'ssl_require': True,
+        # },
     }
 }
+
+
 
 
 # Password validation
