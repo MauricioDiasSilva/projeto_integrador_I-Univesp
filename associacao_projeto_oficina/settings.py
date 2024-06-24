@@ -33,6 +33,7 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 DEBUG = True
 
 ALLOWED_HOSTS = ['associacao-projeto-oficina.azurewebsites.net']
+# ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['associacao-projeto-oficina.azurewebsites.net']
 
@@ -93,8 +94,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db',
         'USER': 'root',
+        # 'PASSWORD': '',
         'PASSWORD': '123456',
         'HOST': 'projeto-integrador-1.privatelink.mysql.database.azure.com.',
+        # 'HOST': '127.0.0.1',
         'PORT': '3306',
         # 'OPTIONS': {
         #     'ssl': {
