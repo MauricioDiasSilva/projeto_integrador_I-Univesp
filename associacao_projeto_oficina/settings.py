@@ -32,12 +32,9 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 # DEBUG =os.environ.get('debug')
 DEBUG = True
 
-ALLOWED_HOSTS = ['associacao-projeto-oficina.azurewebsites.net']
+ALLOWED_HOSTS = [*]
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://associacao-projeto-oficina.azurewebsites.net',
-    'https://associacao-projeto-oficina.azurewebsites.net',
-]
+CSRF_TRUSTED_ORIGINS = [*]
 
 
 # Application definition
