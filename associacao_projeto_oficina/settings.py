@@ -32,9 +32,9 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 # DEBUG =os.environ.get('debug')
 DEBUG = True
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [*]
+CSRF_TRUSTED_ORIGINS = ['*']
 
 
 # Application definition
