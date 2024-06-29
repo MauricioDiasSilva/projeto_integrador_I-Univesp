@@ -32,10 +32,10 @@ SECRET_KEY = 'django-insecure-^qj*p=vgc-@ezic4o&4^z)+0kc&jif+pfv1uyx50mbk(uzur=z
 # DEBUG =os.environ.get('debug')
 DEBUG = True
 
-ALLOWED_HOSTS = ['associacao-projeto-oficina.azurewebsites.net']
+ALLOWED_HOSTS = ['https://associacao-projeto-oficina.azurewebsites.net']
 # ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['associacao-projeto-oficina.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://associacao-projeto-oficina.azurewebsites.net']
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db',
-        'USER': 'root',
+        'USER': 'admin',
         'PASSWORD': '123456',
         'HOST': 'projeto-integrador-1.mysql.database.azure.com',
         'PORT': '3306',
