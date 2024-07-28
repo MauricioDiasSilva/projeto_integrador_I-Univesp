@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'db',
         'USER': 'Mauricio',
         'PASSWORD': 'Dud@cl@r@01',
-        'HOST': 'projeto-integrador-1.mysql.database.azure.com',
+        'HOST': 'associacao-projeto-oficina-1.mysql.database.azure.com',
         'PORT': '3306',
         # 'OPTIONS': {
         #     'ssl': {
