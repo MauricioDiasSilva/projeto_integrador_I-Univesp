@@ -92,7 +92,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db',
-        'USER': 'qlkkxkgmvz',
+        'USER': 'Mauricio',
         'PASSWORD': 'Dud@cl@r@01',
         'HOST': 'projeto-integrador-1.mysql.database.azure.com',
         'PORT': '3306',
