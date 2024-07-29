@@ -34,7 +34,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['associacao-projeto-oficina.azurewebsites.net']
 
-CSRF_TRUSTED_ORIGINS = ['associacao-projeto-oficina.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://associacao-projeto-oficina.azurewebsites.net']
+
 
 
 # Application definition
