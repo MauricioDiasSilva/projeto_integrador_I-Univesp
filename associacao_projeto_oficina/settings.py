@@ -94,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db',
         'USER': 'Mauricio',
-        'PASSWORD': 'Dud@cl@r@01',
+        'PASSWORD': 'senha',
         'HOST': 'associacao-projeto-oficina-1.mysql.database.azure.com',
         'PORT': '3306',
         # 'OPTIONS': {
