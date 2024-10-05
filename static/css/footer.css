@@ -1,86 +1,141 @@
+/* Estilos do Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-section-about,
-.footer-section-links,
-.footer-section-contact,
-.footer-section-social {
+.footer-section {
     flex: 1;
-    min-width: 200px;
-    margin: 10px;
+    min-width: 250px;
+    margin: 20px;
+    text-align: left;
 }
 
+/* Estilo para os títulos do Footer */
+#footer-links-title,
+#footer-social-title,
+#footer-contact-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f4f4f4;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    /* Letras maiúsculas para mais destaque */
+    letter-spacing: 1px;
+    /* Aumenta o espaçamento entre as letras para um visual mais moderno */
+}
+
+/* Responsividade dos títulos no Footer */
+@media (max-width: 768px) {
+
+    #footer-links-title,
+    #footer-social-title,
+    #footer-contact-title {
+        font-size: 18px;
+    }
+}
+
+/* Estilo para títulos das seções do footer */
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #f4f4f4;
+    /* Cor mais suave para os títulos */
+}
+
+/* Estilo para a seção "Links Úteis" */
 .footer-section-links ul {
     list-style-type: none;
+    /* Remove os marcadores de lista */
     padding: 0;
+    margin: 0;
 }
 
-.footer-section-links h2,
-.footer-section-contact h2,
-.footer-section-social h2 {
+.footer-section-links li {
     margin: 10px 0;
 }
 
-.footer-section-links li,
+.footer-section-links a {
+    color: #ccc;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-section-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Estilo para a seção "Contato" */
 .footer-section-contact p {
-    margin: 5px 0;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Estilo para "Redes Sociais" */
+.footer-section-social {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer-section-social a {
-    margin-right: 10px;
+    margin: 0 15px;
+    font-size: 22px;
+    color: #ccc;
+    transition: color 0.3s ease;
 }
 
-.footer-section-social img {
-    width: 30px;
-    /* Ajuste o tamanho das imagens conforme necessário */
-    height: auto;
+.footer-section-social a:hover {
+    color: #1da1f2;
+    /* Exemplo de cor de hover para Twitter; personalize com a cor de outras redes */
 }
 
-/* Estilos adicionais (ajuste conforme necessário) */
+/* Estilo para Título e Subtítulo do Footer */
 #footer-title {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 #footer-subtitle {
     font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
 }
 
-#footer-links-title,
-#footer-contact-title,
-#footer-social-title {
-    font-size: 20px;
-}
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 0 20px;
+    }
 
-#footer-support-title {
-    font-size: 16px;
-}
+    .footer-section {
+        margin: 20px 0;
+        text-align: center;
+    }
 
-#footer-email,
-#footer-phone,
-#footer-address,
-#footer-email-2 {
-    font-size: 14px;
-}
+    .footer-section-about {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-/* Ajustes para links do WhatsApp */
-.whatsapp-plugin-flutuante {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Removendo margens de todos os elementos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    .footer-section-social {
+        margin-top: 30px;
+    }
 }

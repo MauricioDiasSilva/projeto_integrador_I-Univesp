@@ -1,16 +1,28 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% load static %}
 
-<title>{% block title %}Associação Projeto Oficina{% endblock %}</title>
+{% block title %}Associação Projeto Oficina{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
 
 <header>
-    <div class="carrossel">
-        <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel1.jpg" %}')"></div>
-        <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel2.jpg" %}')"></div>
-        <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel1.jpg" %}')"></div>
-        <div class="slide" style="background-image: url('{% static "imagens/imagemcarrossel5.jpg" %}')"></div>
+   <div class="carousel-container">
+        <div class="carousel-slide">
+            {% for image in carousel_images %}
+            <div class="carousel-item">
+                <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                {% if image.title or image.description %}
+                <div class="carousel-caption">
+                    <h3>{{ image.title }}</h3>
+                    <p>{{ image.description }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 </header>
 
@@ -25,55 +37,57 @@
 </aside>
 
 <main>
-    <div class="container">
+    <div class="main-container">
+        <div id="conteudo-principal">
+            <h1>Eventos</h1>
+            <div id="eventos">
+                {% for evento in eventos %}
+                    <div class="evento">
+                        {% if evento.imagem %}
+                            <img src="{{ evento.imagem.url }}" alt="{{ evento.titulo }}">
+                        {% endif %}
+                        <div>
+                            <h2>{{ evento.titulo }}</h2>
+                            <p>{{ evento.descricao }}</p>
+                            <p>{{ evento.data }}</p>
+                            <p>{{ evento.local }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
 
-        <div class="nossahistoria">
-            <img src="{% static 'imagens/imagem2.jpg' %}" alt="Educação">
-            <h3>Transformação através da Educação</h3>
-            <p>João, um jovem de 15 anos, estava à beira de abandonar a escola. Graças ao nosso programa de tutoria, ele não apenas se formou no ensino médio, mas também ganhou uma bolsa de estudos para a universidade!</p>
+            <h1>Notícias</h1>
+            <div id="noticias">
+                {% for noticia in noticias %}
+                    <div class="noticia">
+                        {% if noticia.imagem %}
+                            <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
+                        {% endif %}
+                        <div>
+                            <h2>{{ noticia.titulo }}</h2>
+                            <p>{{ noticia.conteudo }}</p>
+                            <p>{{ noticia.data_publicacao }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-
-        <div class="nossahistoria">
-            <img src="{% static 'imagens/imagem2.jpg' %}" alt="Alimentação">
-            <h3>Alimentando Esperanças</h3>
-            <p>Nossa campanha de alimentação forneceu mais de 10.000 refeições para famílias carentes no último ano, trazendo não apenas nutrição, mas também esperança para essas comunidades.</p>
-        </div>
-
-        <div class="nossahistoria">
-            <img src="{% static 'imagens/imagem2.jpg' %}" alt="Meio Ambiente">
-            <h3>Cuidando do Futuro</h3>
-            <p>Com nosso projeto de plantio de árvores, conseguimos reflorestar uma área de 50 hectares, contribuindo para a preservação do meio ambiente e a conscientização da nossa comunidade sobre a importância da sustentabilidade.</p>
-        </div>
-
-        <div class="nossahistoria">
-            <img src="{% static 'imagens/imagem2.jpg' %}" alt="Emprego">
-            <h3>Capacitação para o Emprego</h3>
-            <p>Nosso programa de treinamento profissionalizante ajudou Maria, mãe solteira de três filhos, a adquirir habilidades em tecnologia da informação. Hoje, ela tem um emprego estável e pode sustentar sua família.</p>
-        </div>
-
     </div>
 
-    <div class="main-container">
-        <h2>Eventos</h2>
-        {% for evento in eventos %}
-            <div class="evento">
-                <h3>{{ evento.titulo }}</h3>
-                <p>{{ evento.descricao }}</p>
-                <p>Data: {{ evento.data }}</p>
-            </div>
-        {% endfor %}
-
-        <h2>Notícias</h2>
-        {% for noticia in noticias %}
-            <div class="noticia">
-                <h3>{{ noticia.titulo }}</h3>
-                <p>{{ noticia.conteudo }}</p>
+  <div class="container">
+        {% for historia in historias %}
+            <div class="nossahistoria">
+                {% if historia.imagem %}
+                    <img src="{{ historia.imagem.url }}" alt="{{ historia.titulo }}">
+                {% endif %}
+                <h3>{{ historia.titulo }}</h3>
+                <p>{{ historia.descricao }}</p>
             </div>
         {% endfor %}
     </div>
 </main>
 
+ <script src="{% static 'js/script.js' %}"></script>
+
 {% endblock content %}
-
-
 

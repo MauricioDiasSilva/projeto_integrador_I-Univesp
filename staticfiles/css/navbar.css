@@ -1,18 +1,67 @@
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilos para a navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    height: 60px;
+    /* Define uma altura fixa */
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    /* Garante que a navbar fique acima de outros elementos */
+    width: 100%;
+    /* Garante que ocupe toda a largura da página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma leve sombra */
 }
 
-nav ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    /* Ajusta o espaçamento entre os itens */
+    font-size: 18px;
+    font-weight: 500;
+    /* Deixa o texto um pouco mais espesso */
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Suaviza a mudança de cor */
+}
+
+/* Remove possíveis margens desnecessárias */
+.navbar,
+.navbar * {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos opcionais para centralizar e ajustar o menu */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    /* Espaçamento entre os links */
+}
+
+.navbar-links a {
+    font-size: 16px;
+    text-transform: uppercase;
 }

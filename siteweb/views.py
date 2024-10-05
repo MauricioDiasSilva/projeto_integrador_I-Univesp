@@ -3,8 +3,7 @@ from .models import Missao, ValorImage,Membro
 from .forms import ContatoForm 
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
-
-
+from .models import Evento, Noticia, Historia, CarouselImage
 
 def login_view(request):
     if request.method == 'POST':
@@ -21,8 +20,16 @@ def login_view(request):
 
 
 def index(request):
-    return render(request, 'siteweb/index.html')
-
+    eventos = Evento.objects.all()
+    noticias = Noticia.objects.all()
+    historias = Historia.objects.all()
+    carousel_images = CarouselImage.objects.filter(is_active=True)
+    return render(request, 'siteweb/index.html', {
+        'eventos': eventos,
+        'noticias': noticias,
+        'historias': historias,
+        'carousel_images': carousel_images
+    })
 
 
 def doacao(request):
@@ -73,6 +80,7 @@ def membros(request):
 def servicos(request):
     membros = Membro.objects.all()  # Obtém todos os membros do banco de dados
     return render(request, 'siteweb/servicos.html', {'servicos': servicos})
+
 
 
 

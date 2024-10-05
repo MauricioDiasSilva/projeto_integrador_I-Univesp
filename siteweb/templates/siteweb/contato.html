@@ -1,15 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
 
 <title>{% block title %}Fale Conosco{% endblock %}</title>
 
 {% block content %}
+<link rel="stylesheet" href="{%static 'css/contato.css' %}" />
+
 
 <div class="form-faleconosco">
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Enviar">
-</form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Enviar">
+    </form>
 </div>
 
 {% endblock content %}
+

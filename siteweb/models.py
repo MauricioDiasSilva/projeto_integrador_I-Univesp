@@ -65,6 +65,15 @@ class Servico(models.Model):
         return self.nome
 
 
+class Historia(models.Model):
+    titulo = models.CharField(max_length=200)
+    descricao = models.TextField()
+    imagem = models.ImageField(upload_to='historias/', blank=True, null=True)
+
+    def __str__(self):
+        return self.titulo
+
+
 class CarouselImage(models.Model):
     image = models.ImageField(upload_to='carousel/')
     title = models.CharField(max_length=100, blank=True, null=True)
@@ -72,4 +81,6 @@ class CarouselImage(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
+
         return self.title or "Carousel Image"
+      
