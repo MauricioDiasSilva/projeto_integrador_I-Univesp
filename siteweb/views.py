@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Missao, ValorImage
-from .forms import ContatoForm  # Adicione esta linha
+from .models import Missao, ValorImage,Membro
+from .forms import ContatoForm 
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 
@@ -65,6 +65,14 @@ def contato(request):
 
     return render(request, 'siteweb/contato.html', {'form': form})
 
+
+def membros(request):
+    membros = Membro.objects.all()  # Obtém todos os membros do banco de dados
+    return render(request, 'siteweb/membros.html', {'membros': membros})
+
+def servicos(request):
+    membros = Membro.objects.all()  # Obtém todos os membros do banco de dados
+    return render(request, 'siteweb/servicos.html', {'servicos': servicos})
 
 
 

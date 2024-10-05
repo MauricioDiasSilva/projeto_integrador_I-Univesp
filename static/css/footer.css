@@ -1,26 +1,86 @@
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
 .footer-content {
     display: flex;
-    justify-content: space-around;
-    padding: 30px;
-    background-color: #2d2d2d;
-    border-top: 3px solid #ff6347;
-    color: #f5f5f5;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.footer-section-links ul li a {
-    text-decoration: none;
-    color: #f5f5f5;
+.footer-section-about,
+.footer-section-links,
+.footer-section-contact,
+.footer-section-social {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section-links h2,
+.footer-section-contact h2,
+.footer-section-social h2 {
+    margin: 10px 0;
+}
+
+.footer-section-links li,
+.footer-section-contact p {
+    margin: 5px 0;
+}
+
+.footer-section-social a {
+    margin-right: 10px;
+}
+
+.footer-section-social img {
+    width: 30px;
+    /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto;
+}
+
+/* Estilos adicionais (ajuste conforme necessário) */
+#footer-title {
+    font-size: 24px;
+}
+
+#footer-subtitle {
+    font-size: 18px;
+}
+
+#footer-links-title,
+#footer-contact-title,
+#footer-social-title {
+    font-size: 20px;
+}
+
+#footer-support-title {
     font-size: 16px;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-
 }
 
-.footer-Redes-Sociais img {
-    width: 50px;
-    height: 50px;
-    margin: 40px;
-    padding: 40px;
-    color: #f5f5f5;
-    transition: transform 0.3s ease;
+#footer-email,
+#footer-phone,
+#footer-address,
+#footer-email-2 {
+    font-size: 14px;
+}
+
+/* Ajustes para links do WhatsApp */
+.whatsapp-plugin-flutuante {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Removendo margens de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

@@ -1,0 +1,78 @@
+/* Estilo geral para a página de Valores */
+.pagina-valores {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
+/* Estilizando o título da página */
+.pagina-valores #titulo-valores {
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilizando o parágrafo na página de Valores */
+.pagina-valores #p-valores {
+    font-size: 25px;
+    color: #1f015b;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Lista de valores */
+.pagina-valores ul#valores {
+    list-style: none;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    /* Centraliza a lista */
+}
+
+/* Estilizando os itens da lista de valores */
+.pagina-valores ul#valores li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 1.0;
+    padding: 10px;
+}
+
+/* Estilizando o contêiner de imagens */
+.imagens_valores {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que as imagens se ajustem à linha */
+    justify-content: center;
+    /* Centraliza as imagens */
+    padding: 15px;
+    margin: 10px auto;
+    /* Centraliza o contêiner de imagens */
+    width: 80%;
+    /* Largura do contêiner ajustável */
+}
+
+/* Estilizando cada imagem dentro do contêiner */
+.img-valor {
+    flex: 1 1 calc(50% - 20px);
+    /* Cada imagem ocupará 50% da largura disponível */
+    margin: 10px;
+    /* Espaçamento entre as imagens */
+    max-width: 200px;
+    /* Tamanho máximo para as imagens */
+    height: 200px;
+    /* Altura fixa para as imagens */
+    overflow: hidden;
+    /* Esconde partes que excedem o contêiner */
+}
+
+/* Estilizando as imagens dentro do item */
+.img-valor img {
+    width: 100%;
+    /* As imagens ocuparão 100% do contêiner */
+    height: 100%;
+    /* Ajusta a altura para preencher o contêiner */
+    object-fit: cover;
+    /* Corta a imagem para preencher o contêiner mantendo a proporção */
+    border-radius: 10px;
+    /* Arredonda os cantos das imagens */
+}

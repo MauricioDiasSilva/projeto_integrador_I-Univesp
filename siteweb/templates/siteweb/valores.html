@@ -1,35 +1,52 @@
 {% extends "base.html" %}
+{% load static %}
 
 <title>{% block title %}Valores{% endblock %}</title>
 
-
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/valores.css' %}">
 
+<main class="pagina-valores">
+    <div class="imagem-valores">
+        <h1 id="titulo-valores">Nossos Valores</h1>
+        <p id="p-valores">Aqui estão os nossos valores fundamentais.</p>
+        <ul id="valores"></ul> <!-- Mantenha o contêiner vazio para o JavaScript -->
+    </div>
 
-<main>
-
- <div class="imagem-valores">
-  <h1 id="titulo-valores" style="display: flex; flex-direction: column; align-items: center;">Nossos Valores</h1>
-  <h3 id="p-valores" style="display: flex; flex-direction: column; align-items: center;font-size:30px;">Nós da Associação Projeto Oficina acreditamos nos seguintes valores fundamentais:</h3>
-  <ul id="valores">
-    <li><span class="Empatia">Empatia:</span> Nós nos esforçamos para entender e compartilhar os sentimentos de nossas crianças e suas famílias.</li>
-    <li><span class="Empatia">Respeito:</span> Valorizamos a individualidade e a dignidade de cada criança que atendemos.</li>
-    <li><span class="Empatia">Integridade:</span> Estamos comprometidos em agir com honestidade, transparência e consistência.</li>
-    <li><span class="Empatia">Inovação:</span> Buscamos constantemente novas e melhores maneiras de atender nossas crianças e suas famílias.</li>
-    <li><span class="Empatia">Colaboração:</span> Trabalhamos juntos para alcançar nossos objetivos e fazer a diferença.</li>
-  </ul>   
-</div>
-
-
-<div class="imagens_valores" style="display: flex; flex-wrap: wrap;">
-{% for imagem in imagens %}
-  <div class="img-valor" style="flex: 1 0 21%; margin: 5px;">
-    <img src={{ imagem.imagem.url }} alt="imagem do valor" style="width: 100%; max-width: 400px;">
-  </div>
-{% endfor %}
-</div>
-
+    <div class="imagens_valores">
+        {% for imagem in imagens %}
+            <div class="img-valor">
+                <img id="img-valor-{{ forloop.counter }}" src="{{ imagem.imagem.url }}" alt="imagem do valor">
+            </div>
+        {% endfor %}
+    </div>
 </main>
 
+<script src="{% static 'js/script.js' %}"></script> <!-- Mova o script para o final -->
+<script>
+// Lista de valores a serem adicionados
+const valores = [
+    "Empatia: Nós nos esforçamos para entender e compartilhar os sentimentos de nossas crianças e suas famílias.",
+    "Respeito: Valorizamos a individualidade e a dignidade de cada criança que atendemos.",
+    "Integridade: Estamos comprometidos em agir com honestidade, transparência e consistência.",
+    "Inovação: Buscamos constantemente novas e melhores maneiras de atender nossas crianças e suas famílias.",
+    "Colaboração: Trabalhamos juntos para alcançar nossos objetivos e fazer a diferença."
+];
+
+// Função para gerar a lista de valores
+function gerarListaValores() {
+    const ulValores = document.getElementById('valores');
+
+    // Itera sobre o array de valores e cria elementos <li>
+    valores.forEach(valor => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="Empatia">${valor.split(':')[0]}:</span> ${valor.split(':')[1]}`; // Divide o texto em título e descrição
+        ulValores.appendChild(li); // Adiciona <li> à <ul>
+    });
+}
+
+// Chama a função para gerar a lista ao carregar a página
+document.addEventListener('DOMContentLoaded', gerarListaValores);
+</script>
 
 {% endblock content %}

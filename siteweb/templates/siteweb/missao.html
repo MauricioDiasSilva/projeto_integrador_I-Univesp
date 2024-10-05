@@ -1,25 +1,40 @@
 {% extends "base.html" %}
 {%load static%}
 
+
 <title>{% block title %}Missão{% endblock %}</title>
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/missao.css' %}">
 
-
-<main>
-
-{% for missao in missoes %}
-  <div class="row {% cycle 'left' 'right' %}">
-    <div class="img-mission">
-      <img src={{ missao.imagem.url }} alt="imagem da missão" style="width: 100%; max-width: 400px;">
-    </div>     
-    <div>
-      <h3 id="titulo">{{ missao.titulo }}</h3>
-      <p id="texto">{{ missao.texto }}</p>
+<main class="pagina-missao">
+    <div class="container-centralizado">
+        {% for missao in missoes %}
+            <div class="row {% cycle 'left' 'right' %}">
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="img-mission">
+                        <img id="img-missao-{{ forloop.counter }}" src="{{ missao.imagem.url }}" alt="imagem da missão">
+                    </div>
+                    <div class="text-mission">
+                        <h3 id="titulo">{{ missao.titulo }}</h3>
+                        <p id="texto">{{ missao.texto }}</p>
+                    </div>
+                {% else %}
+                    <div class="text-mission">
+                        <h3 id="titulo">{{ missao.titulo }}</h3>
+                        <p id="texto">{{ missao.texto }}</p>
+                    </div>
+                    <div class="img-mission">
+                        <img id="img-missao-{{ forloop.counter }}" src="{{ missao.imagem.url }}" alt="imagem da missão">
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
-  </div>
-{% endfor %}
-
 </main>
 
+
+
 {% endblock content %}
+
+

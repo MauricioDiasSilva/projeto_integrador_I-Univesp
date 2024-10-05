@@ -30,4 +30,46 @@ class Contato(models.Model):
     observacoes = models.TextField(null=True, default='Sem observações')
 
 
+class Membro(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=20)
+    endereco = models.TextField()
 
+    def __str__(self):
+        return self.nome
+
+class Evento(models.Model):
+    titulo = models.CharField(max_length=200)
+    descricao = models.TextField()
+    data = models.DateTimeField()
+    local = models.CharField(max_length=200)
+    imagem = models.ImageField(upload_to='eventos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.titulo
+
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=200)
+    conteudo = models.TextField()
+    data_publicacao = models.DateTimeField(auto_now_add=True)
+    imagem = models.ImageField(upload_to='noticias/', blank=True, null=True)
+
+    def __str__(self):
+        return self.titulo
+
+class Servico(models.Model):
+    nome = models.CharField(max_length=200)
+    descricao = models.TextField()
+
+    def __str__(self):
+        return self.nome
+
+class CarouselImage(models.Model):
+    image = models.ImageField(upload_to='carousel/')
+    title = models.CharField(max_length=100, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title or "Carousel Image"

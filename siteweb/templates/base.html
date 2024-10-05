@@ -1,93 +1,92 @@
 {% load static %}
 
-
 <!DOCTYPE html>
+<html lang="pt-BR">
 
-<html lang="PT-br">
-
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Associação Projeto Oficina{% endblock %}</title>
-    <link rel="stylesheet" href="{%static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{%static 'css/footer.css' %}" />  
-    <link rel="stylesheet" href="{%static 'css/navbar.css' %}" />     
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
     <link rel="icon" href="{% static 'imagens/favicon.ico' %}">
-    <script src="{%static 'js/script.js' %}" defer></script>
+</head>
 
-  </head>
+<body id="main-body">
+    <header id="header-nav">
+        <nav class="navbar">
+            <ul id="nav-list">
+                <li id="nav-home"><a href="/">Home</a></li>
+                <li id="nav-missao"><a href="/siteweb/missao.html">Missão</a></li>
+                <li id="nav-valores"><a href="/siteweb/valores.html">Valores</a></li>
+                <li id="nav-contato"><a href="/siteweb/contato.html">Fale Conosco</a></li>
+                <li id="nav-admin"><a href="/siteweb/cadastro.html">Administração</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <nav>
-      <ul>
-       <li><a href="/">Home</a></li>
-       <li><a href="/siteweb/missao.html">Missão</a></li>
-       <li><a href="/siteweb/valores.html">Valores</a></li>
-       <li><a href="/siteweb/contato.html">Fale Conosco</a></li>
-       <li><a href="/siteweb/cadastro.html">Administração</a></li>
-      </ul>
-    </nav>
-  </header>
-
-{% block content %}
-
-
-{% endblock content%}
+    <main id="main-content">
+        {% block content %}
 
 
-<footer>
-  <div class="footer-content">
+        {% endblock content %}
+    </main>
 
-    <div class="footer-section-about">
-      <h1> Associação Projeto Oficina</h1>
-      <h2> Transformando Vidas </h2>
-    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section-about">
+                <h1 id="footer-title">Associação Projeto Oficina</h1>
+                <h2 id="footer-subtitle">Transformando Vidas</h2>
+            </div>
 
-    <div class="footer-section-links">
-      <h2>Links Úteis</h2>
-      <ul>
-        <h3>Suporte</h3>
-        <li> <a href="/">Home</a> </li>
-        <li> <a href="/siteweb/missao.html">Missão</a> </li>
-        <li> <a href="/siteweb/valores.html">Valores</a> </li>
-        <li> <a href="/siteweb/contato.html">Contato</a> </li>
-        <li> <a href="/siteweb/cadastro.html">Página de Administração</a> </li>
-    </ul>
-    </div>
+            <div class="footer-section-links">
+                <h2 id="footer-links-title">Links Úteis</h2>
+                <ul id="footer-links-list">
+                    <h3 id="footer-support-title">Suporte</h3>
+                    <li id="footer-home"><a href="/">Home</a></li>
+                    <li id="footer-missao"><a href="/siteweb/missao.html">Missão</a></li>
+                    <li id="footer-valores"><a href="/siteweb/valores.html">Valores</a></li>
+                    <li id="footer-contato"><a href="/siteweb/contato.html">Contato</a></li>
+                    <li id="footer-admin"><a href="/siteweb/cadastro.html">Página de Administração</a></li>
+                </ul>
+            </div>
 
-  <div class="footer-section contact">
-    <h2>Contato</h2>
-    <p> 11 9 7703-0308</p>
-    <p>projeto.oficina.apo@gmail.com</p>
-    <p>Endereço: R. Brasília, 40 - Cohab 21, Carapicuíba - SP, 06325-070</p>
-    <p>email: associaçãoprojetooficina@hotmail.com </p>
-    <p>Rua Brasilia, 40, Carapicuíba, SP, Brazil</p>
-  </div>
+            <div class="footer-section-contact">
+                <h2 id="footer-contact-title">Contato</h2>
+                <p id="footer-phone">11 9 7703-0308</p>
+                <p id="footer-email">projeto.oficina.apo@gmail.com</p>
+                <p id="footer-address">Endereço: R. Brasília, 40 - Cohab 21, Carapicuíba - SP, 06325-070</p>
+                <p id="footer-email-2">email: associacaoprojetooficina@hotmail.com</p>
+            </div>
 
-<div class="footer-Redes Sociais">
-    <a href="https://www.facebook.com/seuPerfil" target="_blank">
-        <img src="{% static 'imagens/logofacebook.png' %}" alt="facebook">
-    </a>
-    <a href="https://twitter.com/seuPerfil" target="_blank">
-        <img src="{% static 'imagens/logotwitter.png' %}" alt="twitter">
-    </a>
-    <a href="https://www.instagram.com/seuPerfil" target="_blank">
-        <img src="{% static 'imagens/logoinstagram.png' %}" alt="instagram">
-    </a>
-    <a href="https://www.linkedin.com/in/seuPerfil" target="_blank">
-        <img src="{% static 'imagens/logolinkedin.png' %}" alt="linkedin">
-    </a>
-    <br><br><br>
-    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511977030308" target="_blank" class="whatsapp-plugin-flutuante" style="color: white; text-decoration: none; font-size:20px; hover:auto:">
-    <img src="{% static '/imagens/logo-whatsapp.png' %}" alt="whatsapp">
-    <span>Fale conosco</span>
-    <p>Clique aqui para começar</p>
-</a>
+            <div class="footer-section-social">
+                <h2 id="footer-social-title">Redes Sociais</h2>
+                <a href="https://www.facebook.com/seuPerfil" target="_blank" id="footer-facebook">
+                    <img src="{% static 'imagens/logofacebook.png' %}" alt="facebook">
+                </a>
+                <a href="https://twitter.com/seuPerfil" target="_blank" id="footer-twitter">
+                    <img src="{% static 'imagens/logotwitter.png' %}" alt="twitter">
+                </a>
+                <a href="https://www.instagram.com/seuPerfil" target="_blank" id="footer-instagram">
+                    <img src="{% static 'imagens/logoinstagram.png' %}" alt="instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" id="footer-linkedin">
+                    <img src="{% static 'imagens/logolinkedin.png' %}" alt="linkedin">
+                </a>
+                <br><br>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511977030308" target="_blank" class="whatsapp-plugin-flutuante" style="color: white; text-decoration: none; font-size:20px;" id="footer-whatsapp">
+                    <img src="{% static 'imagens/logo-whatsapp.png' %}" alt="whatsapp">
+                    <span>Fale conosco</span>
+                    <p>Clique aqui para começar</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-</div>
-
-
-</footer>
-
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
 
 </html>

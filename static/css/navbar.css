@@ -1,18 +1,34 @@
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+/* Estilos para a navbar */
+#header-nav {
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-nav ul {
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-list {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
 }
 
-nav ul li a {
+#nav-list li {
+    margin: 0 15px;
+}
+
+#nav-list a {
     color: white;
     text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#nav-list a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
