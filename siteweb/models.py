@@ -29,7 +29,6 @@ class Contato(models.Model):
     telefone = models.CharField(max_length=20, null=True, default="Insira um telefone")
     observacoes = models.TextField(null=True, default='Sem observações')
 
-
 class Membro(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
@@ -64,6 +63,7 @@ class Servico(models.Model):
 
     def __str__(self):
         return self.nome
+
 
 class CarouselImage(models.Model):
     image = models.ImageField(upload_to='carousel/')
