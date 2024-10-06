@@ -21,8 +21,8 @@
             </div>
             {% endfor %}
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <button class="prev" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
     </div>
 </header>
 
@@ -87,7 +87,9 @@
     </div>
 </main>
 
- <script src="{% static 'js/script.js' %}"></script>
+<!-- Inclua o script no final para garantir que o DOM seja carregado -->
+<script src="{% static 'js/script.js' %}"></script>
 
 {% endblock content %}
+
 

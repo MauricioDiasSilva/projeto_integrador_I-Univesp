@@ -7,13 +7,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Associação Projeto Oficina{% endblock %}</title>
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-=======
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
->>>>>>> Stashed changes
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
@@ -50,8 +45,7 @@
             <div class="footer-section-links">
                 <h2 id="footer-links-title">Links Úteis</h2>
                 <ul id="footer-links-list">
-                    <h3 id="footer-support-title">Suporte</h3>
-                    <li id="footer-home"><a href="/">Home</a></li>
+                    <li id="footer-home"><a href="{% url 'index' %}">Home</a></li>
                     <li id="footer-missao"><a href="/siteweb/missao.html">Missão</a></li>
                     <li id="footer-valores"><a href="/siteweb/valores.html">Valores</a></li>
                     <li id="footer-contato"><a href="/siteweb/contato.html">Contato</a></li>
@@ -85,16 +79,11 @@
                 <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511977030308" target="_blank" class="whatsapp-plugin-flutuante" style="color: white; text-decoration: none; font-size:20px;" id="footer-whatsapp">
                     <img src="{% static 'imagens/logo-whatsapp.png' %}" alt="whatsapp">
                     <span>Fale conosco</span>
-                    <p>Clique aqui para começar</p>
                 </a>
             </div>
         </div>
     </footer>
 
-<<<<<<< Updated upstream
-    <script src="{% static 'js/script.js' %}"></script>
-=======
->>>>>>> Stashed changes
 </body>
 
 </html>

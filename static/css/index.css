@@ -120,8 +120,8 @@ button.next {
 .evento,
 .noticia {
     display: flex;
-    background-color: #bd0893;
-    color: aliceblue;
+    background-color: #87a7c9;
+    color: rgb(6, 26, 44);
     font-size: 20px;
     margin-bottom: 20px;
     padding: 20px;
