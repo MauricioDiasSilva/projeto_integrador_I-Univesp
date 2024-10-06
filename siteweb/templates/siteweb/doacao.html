@@ -3,14 +3,13 @@
 
 <title>{% block title %}Doação{% endblock %}</title>
 
-
 {% block content %}
-<link rel="stylesheet" href="{%static 'css/doacao.css' %}" />
+<link rel="stylesheet" href="{% static 'css/doacao.css' %}" />
 
 <div class="doacao-pix">
   <h2>Faça uma doação via Pix</h2>
   <p>Escaneie o QR Code abaixo com o aplicativo do seu banco para fazer uma doação:</p>
-  <img id="logopix" src={% static "\imagens\qrcodepix.jpg" %} alt="QR Code do Pix">   
+  <img id="logopix" src="{% static 'imagens/qrcodepix.jpg' %}" alt="QR Code do Pix">   
 </div>
 
 {% endblock content %}

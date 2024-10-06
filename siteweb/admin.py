@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from .models import CriancaEspecial, Missao, ValorImage, Contato, Membro, Evento, Noticia, Servico,Historia,CarouselImage
+from .models import CriancaEspecial, Missao, ValorImage, Contato, Membro, Evento, Noticia, Servico,CarouselImage
 admin.site.register(CriancaEspecial)
 admin.site.register(Missao)
 admin.site.register(ValorImage)
@@ -11,14 +11,6 @@ admin.site.register(Noticia)
 admin.site.register(Servico)
 
 
-class HistoriaAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'descricao', 'imagem')
-    search_fields = ('titulo', 'descricao')
-    list_filter = ('titulo',)
-
-admin.site.register(Historia, HistoriaAdmin)
-
-
 class CarouselImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'is_active')
     list_filter = ('is_active',)
@@ -26,8 +18,15 @@ class CarouselImageAdmin(admin.ModelAdmin):
 
 admin.site.register(CarouselImage)
 
+class Membro(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'telefone')
+    search_fields = ('nome', 'email')
+    list_filter = ('telefone',)  # Exemplo de filtro por telefone
 
-
+class CriancaEspecial(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'telefone')
+    search_fields = ('nome', 'email')
+    list_filter = ('telefone',)  # Exemplo de filtro por telefone
 
 
 
